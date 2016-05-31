@@ -1,5 +1,5 @@
 <?php
-  $con = mysqli_collect ("my_host", "my_user", "my_password", "my_db");
+  $con = mysqli_connect ("mysql8.000webhost.com", "a5676971_chay21", "music7EEE", "a5676971_rateAPP");
   
   $name = $_POST("name");
   $age = $_POST("age");
@@ -8,7 +8,7 @@
   
   $statement = mysqli_prepare($con, "INSERT INTO user (name, age, username, password) VALUES (?, ?, ?, ?,)");
   msqli_stmt_bind_param($statement, "siss", $name, $age $username, $password);
-  msqli_stmt_execute(statement);
+  msqli_stmt_execute($statement);
   
   $response = array();
   $response["success"] = true;
